@@ -6,21 +6,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class=""title>Welcome to Ferry Booking System</h1>
-    <form>
+    <h1 class=""title>Ahoy Matey!</h1>
+    <form id="bookingForm">
         
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="fname"><br>
+        <input type="text" id="fname" name="fname" required><br>
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lname"><br>
+        <input type="text" id="lname" name="lname" required><br>
         <label for="phone">Phone Number</label>
         <input type="text" id="phone" name="phone"><br>
         <label for="email">Email Address</label>
         <input type="text" id="email" name="email"><br>
-        <label for="depart">Choose a date: </label>
-        <input type="date" id="depart" name="depart"><br>
-        <label for="timedepart">Time: </label>
-        <input type="time" id="timedepart" name="timedepart"><br>
+        
+        <label for="availDate">Select an available date: </label>
+        <select id="availDate" required>
+            <option value="">Choose a date</option>
+        </select>
+        
+        <label for="availTime">Select an available time: </label>
+        <select id="availTime" required>
+            <option value="">Choose a time</option>
+        </select>
         
         <p>Choose Package: </p>
         

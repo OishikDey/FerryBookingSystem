@@ -70,7 +70,7 @@ async function loadBookings() {
       <td>${booking.firstName} ${booking.lastName}</td>
       <td>${booking.phoneNumber}</td>
       <td>${booking.emailAddress}</td>
-      <td>${booking.departureDate}</td>
+      <td>${booking.date}</td>
       <td>${booking.time}</td>
       <td>${booking.selectedPackage}</td>
       <td>
