@@ -1,0 +1,117 @@
+/* General page styling */
+.title {
+    text-align: center;
+    margin: 40px auto 20px auto;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f6fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Form container */
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    align-items: center;
+}
+
+/* Labels and inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Radio buttons */
+p {
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: bold;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+label[for="standard"],
+label[for="premium"],
+label[for="family"] {
+    font-weight: normal;
+    color: #2d3436;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #1f6391;
+}
+
+.radio-group {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    label, input[type="text"], input[type="date"], input[type="submit"] {
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

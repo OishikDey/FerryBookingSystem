@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Ferry Booking System</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <h1 class="title">Admin Panel</h1>
+
+  <!-- Add Available Date/Time -->
+  <section class="admin-section">
+    <h2>Add Available Date & Time</h2>
+    <form id="availabilityForm">
+      <label for="availDate">Date:</label>
+      <input type="date" id="availDate" required>
+
+      <label for="availTime">Time:</label>
+      <input type="time" id="availTime" required>
+
+      <button type="submit">Add Slot</button>
+    </form>
+
+    <ul id="availabilityList"></ul>
+  </section>
+
+  <!-- Manage Bookings -->
+  <section class="admin-section">
+    <h2>Manage Bookings</h2>
+    <table id="bookingTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Package</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="bookingList">
+        <!-- Populated dynamically -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>

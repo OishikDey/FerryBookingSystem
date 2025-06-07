@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Ferry Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class=""title>Welcome to Ferry Booking System</h1>
+    <form>
+        
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone"><br>
+        <label for="email">Email Address</label>
+        <input type="text" id="email" name="email"><br>
+        <label for="depart">Choose a date: </label>
+        <input type="date" id="depart" name="depart"><br>
+        <label for="timedepart">Time: </label>
+        <input type="time" id="timedepart" name="timedepart"><br>
+        
+        <p>Choose Package: </p>
+        
+        <div class=""radio-group>
+            <label>
+                <input type="radio" name="package" value="Standard Package ($250)">
+                Standard Package ($250)
+            </label>
+        </div>
+        
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="package" value="Premium Package ($500)">
+                Premium Package ($500)
+            </label>
+        </div>
+        <div class="radio-group">
+            <label>   
+                <input type="radio" name="package" value="Family Special Package for group of four ($900)">
+                Family Special Package for group of four ($900)
+            </label>
+        </div>
+
+        <input type="submit" value="Book Now!">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
