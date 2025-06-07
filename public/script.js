@@ -1,8 +1,6 @@
-// === Elements ===
 const dateSelect = document.getElementById("availDate");
 const timeSelect = document.getElementById("availTime");
 
-// === Load availability on page load ===
 async function loadAvailability() {
     const res = await fetch("/api/availability");
     const slots = await res.json();
