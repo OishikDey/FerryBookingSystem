@@ -1,16 +1,13 @@
-// === URLs to your API endpoints ===
 const API_BASE = '/api';
 const AVAILABILITY_URL = `${API_BASE}/availability`;
 const BOOKINGS_URL = `${API_BASE}/bookings`;
 
-// === DOM Elements ===
 const availabilityForm = document.getElementById('availabilityForm');
 const availDate = document.getElementById('availDate');
 const availTime = document.getElementById('availTime');
 const availabilityList = document.getElementById('availabilityList');
 const bookingList = document.getElementById('bookingList');
 
-// === Add Availability Slot ===
 availabilityForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -35,7 +32,6 @@ availabilityForm.addEventListener('submit', async (e) => {
   }
 });
 
-// === Load Availability Slots ===
 async function loadAvailability() {
   const res = await fetch(AVAILABILITY_URL);
   const slots = await res.json();
@@ -52,13 +48,11 @@ async function loadAvailability() {
   });
 }
 
-// === Delete Slot ===
 async function deleteAvailability(id) {
   await fetch(`${AVAILABILITY_URL}/${id}`, { method: 'DELETE' });
   loadAvailability();
 }
 
-// === Load Bookings ===
 async function loadBookings() {
   const res = await fetch(BOOKINGS_URL);
   const bookings = await res.json();
@@ -82,13 +76,11 @@ async function loadBookings() {
   });
 }
 
-// === Delete Booking ===
 async function deleteBooking(id) {
   await fetch(`${BOOKINGS_URL}/${id}`, { method: 'DELETE' });
   loadBookings();
 }
 
-// === Edit Booking (simplified alert prompt) ===
 async function editBooking(id) {
   const res = await fetch(`${BOOKINGS_URL}`);
   const bookings = await res.json();
@@ -113,6 +105,5 @@ async function editBooking(id) {
   loadBookings();
 }
 
-// === Initial Load ===
 loadAvailability();
 loadBookings();
