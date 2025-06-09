@@ -9,8 +9,15 @@ A simple ferry booking system created using HTML, Node.js, MongoDB, CSS &amp; Ja
   <li>Fixed 'undefined' error on date & time column of bookings.</li>
 </ul>
 
-<h3>2025-06-08</h3>\
+<h3>2025-06-08</h3>
 <ul>
   <li>Added capacity for each availability slot.</li>
   <li>Capacity decrement when a booking is created.</li>
+</ul>
+
+<h3>2025-06-09</h3>
+<ul>
+  <li>Fixed capacity decrement.</li>
+  <li>Fixed overbooking (exceeding the capacity).</li>
+  <li>Capacity is shown beside the time slot.</li>
 </ul>
