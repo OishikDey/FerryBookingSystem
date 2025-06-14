@@ -21,3 +21,8 @@ A simple ferry booking system created using HTML, Node.js, MongoDB, CSS &amp; Ja
   <li>Fixed overbooking (exceeding the capacity).</li>
   <li>Capacity is shown beside the time slot.</li>
 </ul>
+
+<h3>2025-06-14</h3>
+<ul>
+  <li>Capacity decrement after a booking is deleted.</li>
+</ul>
