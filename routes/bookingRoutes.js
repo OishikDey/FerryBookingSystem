@@ -12,7 +12,6 @@ router.post('/', async (req, res) => {
   const { date, time } = req.body;
 
   try {
-    // Find the availability slot
     const slot = await Availability.findOne({ date, time });
 
     if (!slot) {
@@ -23,11 +22,9 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ error: "This slot is fully booked." });
     }
 
-    // Create booking
     const newBooking = new Booking(req.body);
     await newBooking.save();
 
-    // Decrement capacity
     slot.capacity -= 1;
     await slot.save();
 
@@ -44,8 +41,22 @@ router.put('/:id', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-  await Booking.findByIdAndDelete(req.params.id);
-  res.json({ message: 'Booking deleted' });
+  try {
+    const booking = await Booking.findById(req.params.id);
+    if (!booking) {
+      return res.status(404).json({error: 'Booking not found.'})
+    }
+    const slot = await Availability.findOne({date: booking.date, time: booking.time});
+    if (slot) {
+      slot.capacity += 1;
+      await slot.save();
+    }
+    await Booking.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Booking deleted and capacity updated.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({error: 'Internal server error.'});
+  }
 });
 
 module.exports = router;
